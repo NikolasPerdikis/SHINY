@@ -3,7 +3,7 @@ library(miniUI)
 
 myFirstGadget <- function() {
     ui <- miniPage(
-        gadgetTitleBar("My First Gadget")
+        gadgetTitleBar("Nikisek's First Gadget")
     )
     server <- function(input, output, session) {
         # The Done button closes the app
