@@ -11,11 +11,11 @@ shinyServer(function(input, output) {
         POPInput <- input$sliderPOP
         gg <- ggplot(longley, aes(x=Population, y=Unemployed)) +
             geom_point(size=3) + 
-            xlim(c(100, 130)) + 
-            ylim(c(180, 400)) + 
+            xlim(c(100, 135)) + 
+            ylim(c(180, 500)) + 
             labs(subtitle="Simple linear model to display shiny functionality",
                 y="Unemployed", 
-                 x="Population", 
+                 x="Population [in thousands]", 
                  title="Unemployed per Population Size", 
                  caption = "Source: data(longley)")
         
