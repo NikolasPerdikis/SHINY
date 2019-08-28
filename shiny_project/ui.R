@@ -1,24 +1,17 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
+    titlePanel("Predict Unemployment"),
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+            sliderInput("sliderPOP","Slide to change population estimate! (in 100K units)",105,125,value=115),
+            checkboxInput("showModel1","Show/Hide Linear Model",value=TRUE),
+            submitButton("Submit")
         ),
-
-        # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("distPlot")
+            plotOutput("plot1"),
+            h3("Predicted Unemployment from Model:"),
+            textOutput("pred1")
         )
     )
 ))

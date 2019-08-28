@@ -21,7 +21,7 @@ model2pred <- reactive({
            mpgInput <- input$sliderMPG
            
            plot(mtcars$mpg,mtcars$hp,xlab = "Miles Per Gallon",
-                ylab="Horsepower",bty = "n", pch = 16,
+                ylab="Horsepower",bty = "n", pch = 14,
                 xlim=c(10,35),ylim = c(50,350))
            if(input$showModel1) {
                abline(model1,col="red",lwd = 2)
